@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etiquetas en JavaScript</title>
+    </head>
+    <body>
+        <script>
+            // Aquí la etiqueta es redundante pero funciona igualmente
+            mi_loop_for:
+            for (let x = 1; x <= 10; x++) {
+                if (x == 4) {
+                    break mi_loop_for;
+                } else {
+                    document.write(x);
+                }
+            }
+
+            document.write("<br><br>")
+
+            // Aquí la etiqueta sí funciona correctamente
+            let alto = 4;
+            let ancho = 3;
+
+            loop_tablero:
+            for (x = 1; x <= alto; x++) {
+                for (y = 1; y <= ancho; y++) {
+                    document.write(x + "." + y + "<br>");
+                    if (x == 2 && y == 2) {
+                        break loop_tablero;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

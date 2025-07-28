@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', 'Lucida Sans', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdf6e3;
+}
+
+h1 { 
+    color: #c0395f;
+    font-family: "Great Vibes", cursive;
+    font-size: 2.8em;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px #fff;
+    margin-bottom: 0.3em;
+}
+
+.logo img {
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.espera img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: rotar 1.2s linear infinite;
+}
+
+@keyframes rotar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cuadro {
+    background-color: #d54d7b;
+    border-radius: 12px;
+    margin: 20px 0;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.cuadro:hover {
+    transform: scale(1.02);
+}
+
+.cuadro div {
+    margin: 15px;
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}

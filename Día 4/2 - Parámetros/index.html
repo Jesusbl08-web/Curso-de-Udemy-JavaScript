@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>Parámetros</title>
+    </head>
+    <body>
+        <p>Escribe el primer número:</p>
+        <input type = "number" id = "primer_numero">
+
+        <p>Escribe el segundo número:</p>
+        <input type = "number" id = "segundo_numero"><br><br>
+
+        <button onclick = "mostrar_resultado()">Sumar</button>
+
+        <p id = "texto_resultado"></p>
+
+        <script>
+            function sumar(x, y) {
+                resultado = +x + +y;
+                return resultado;
+            }
+
+            function mostrar_resultado() {
+                let primer_numero = document.getElementById("primer_numero").value;
+                let segundo_numero = document.getElementById("segundo_numero").value;
+                let texto_resultado = document.getElementById("texto_resultado");
+
+                let resultado_suma = sumar(primer_numero, segundo_numero);
+
+                texto_resultado.textContent = "La suma de " + primer_numero + " + " + segundo_numero + " es: " + resultado_suma;
+            }
+        </script>
+    </body>
+</html>

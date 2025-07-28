@@ -1,0 +1,57 @@
+/* Estilo para el título principal */
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff66b2;
+    text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.6);
+    font-size: 44px;
+    text-align: center;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Clase para centrar texto */
+.texto_centrado {
+    text-align: center;
+}
+
+/* Estilo para botones */
+button {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Estilos de listas sin viñetas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* Estilo individual de cada ítem */
+li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+li:hover {
+    background: #f0f8ff;
+}

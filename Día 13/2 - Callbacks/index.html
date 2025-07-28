@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>Callbacks</title>
+    </head>
+    <body>
+        <script>
+            function avanzar_fila(callback) {
+                setTimeout(function() {
+                    console.log("Tu turno ha llegado");
+                    callback();
+                }, 5000);
+            }
+
+            function mujer_me_llama() {
+                console.log("Te ha tocado tu turno");
+            }
+
+            console.log("He llegado a la fila");
+            avanzar_fila(mujer_me_llama);
+            console.log("Me voy a comprar café");
+        </script>
+    </body>
+</html>

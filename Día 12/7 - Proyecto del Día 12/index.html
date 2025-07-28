@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>Proyecto del Día 12</title>
+        <link rel = "stylesheet" href = "estilos/estilos.css">
+    </head>
+    <body>
+        <h1>Buscador</h1>
+        <hr>
+        <div class = "bloque">
+            Seleccione una opción:
+            <select id = "selector_1">            
+                <option value = "json/peliculas.json">Peliculas</option>                
+                <option value = "json/series.json">Series</option>
+            </select>
+        </div>
+        <div class = "bloque">
+            <input id = "input_1" placeholder = "Ingrese para buscar...">
+            <button id = "boton_buscar">Buscar</button>
+        </div>
+        <div class = "bloque">
+            <ul id = "listado">
+            </ul>
+        </div>        
+        <script src = "scripts/script.js"></script>
+    </body>
+</html>

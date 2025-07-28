@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <head>
+        <title>Fetch</title>
+    </head>
+    <body>
+        <div id = "nombre"></div>
+
+        <script>
+            let datos_json;
+
+            fetch('json/persona.json')
+            .then(res => res.json())
+            .then((salida) => {
+                datos_json = salida;
+
+                let elemento_texto = document.getElementById("nombre");
+                elemento_texto.textContent = datos_json.nombre;
+            });
+        </script>
+    </body>
+</html>

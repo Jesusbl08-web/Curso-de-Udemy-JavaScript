@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>Clases</title>
+    </head>
+    <body>
+        <script>
+            class Papel {
+                constructor (alto, ancho) {
+                    this.alto = alto;
+                    this.ancho = ancho;
+                }
+            }
+
+            // Clase Anónima
+            let Papel_A = class {
+                constructor (alto, ancho) {
+                    this.alto = alto;
+                    this.ancho = ancho;
+                }
+            }
+
+            // clase Nombrada
+            let Papel_B = class Papel_C {
+                constructor (alto, ancho) {
+                    this.alto = alto;
+                    this.ancho = ancho;
+                }
+            }
+
+            let papel_Z = new Papel(3,4);
+        </script>
+    </body>
+</html>

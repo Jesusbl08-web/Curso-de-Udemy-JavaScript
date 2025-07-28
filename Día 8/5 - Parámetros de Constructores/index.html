@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>Parámetros de Constructores</title>
+    </head>
+    <body>
+        <script>
+            function Perro(raza, edad) {
+                this.patas = 4;
+                this.raza = raza;
+                this.edad = edad;
+                this.ladrar = function() {
+                    console.log("Guau");
+                }
+            }
+
+            let firulais = new Perro("Pastor belga", 5);
+            let toby = new Perro("Beagle", 15);
+
+            function Empleado (nombre, apellido, edad, cargo) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+                this.cargo = cargo;
+                this.presentacion = function() {
+                    console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo} y tengo ${this.edad} años de edad`);
+                };
+            }
+
+            let jesus = new Empleado("Jesús", "Bejarano Liberal", 21, "Desarrollador Web");
+        </script>
+    </body>
+</html>

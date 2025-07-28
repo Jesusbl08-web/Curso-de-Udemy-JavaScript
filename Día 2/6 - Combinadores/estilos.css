@@ -1,0 +1,19 @@
+div p {
+    color: green;
+}
+
+ol > li {
+    font-weight: bolder;
+}
+
+h1 ~ h2 {
+    color: red;
+}
+
+h2 + h3 {
+    background-color: skyblue;
+}
+
+div p[style] {
+    background-color: gold;
+}

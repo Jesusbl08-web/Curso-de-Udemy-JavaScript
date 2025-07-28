@@ -1,0 +1,16 @@
+{
+    "banco": "Banco de Springfield",
+    "sucursal": "Springfield, IL",    
+    "titular": "Jesús Bejarano",
+    "num_cuenta": "1752461/08",    
+    "saldo": [ 
+                { 
+                    "moneda": "USD", "valor": 725.09 
+                }, 
+                { 
+                    "moneda": "EUR", "valor": 195.67 
+                } 
+            ],
+    "cbu": "1562244781396451",
+    "abierto": "01/05/2021"
+}

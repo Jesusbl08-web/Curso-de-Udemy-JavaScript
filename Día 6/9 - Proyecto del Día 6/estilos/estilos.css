@@ -1,0 +1,39 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    width: 200px;
+    height: 200px;
+}
+
+#logo h1 {
+    color: goldenrod;
+}
+
+li {
+    font-weight: bolder;
+    color: #2f69d4;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    background-color: #2f69d4;
+    color: white;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#informacion span {
+    font-weight: bolder;
+    font-size: large;
+    color: #2f69d4;
+}

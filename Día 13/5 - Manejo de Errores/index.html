@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <head>
+        <title>Manejo de Errores</title>
+    </head>
+    <body>
+        <script>
+            // Así sería el manejo de errores mediante "Callbacks"
+            function sumar_numeros(a, b, callback) {
+                setTimeout(function() {
+                    if (typeof a != 'number' || typeof b != 'number') {
+                        return callback(new Error("Algún argumento no es un número"));
+                    }
+                    callback(null, a + b);
+                }, 1000)
+            }
+            
+            sumar_numeros('2', 5, function(error, resultado) {
+                if (error) { 
+                    console.error(error); 
+                } else { 
+                    console.log(resultado); 
+                }
+            });
+
+            // Así sería el manejo de errores mediante "Promesas"
+            function sumar_numeros_2(a, b) {
+                return new Promise(function(resolve, reject) {
+                    setTimeout(function() {
+                        if (typeof a != 'number' || typeof b != 'number') {
+                            reject(new Error("Ambos argumentos deben ser números"));
+                        } else {
+                            resolve(a + b);
+                        }                           
+                    }, 1000)
+                })
+                
+            }
+            
+            sumar_numeros_2('5', 5)
+            .then(function(resultado) {
+                console.log(resultado);
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+
+            // Así sería el manejo de errores mediante "Async / Await"
+            async function sumar_numeros_3(a, b) {
+                if (typeof a != 'number' || typeof b != 'number') {
+                    throw new Error("Alguno de los argumentos no es un número");
+                }
+                return a + b;
+            }
+
+            async function manejar_errores() {
+                try {
+                    let resultado = await sumar_numeros_3(7, '2');
+                    console.log(resultado);
+                } catch (error)  {
+                    console.error(error.message)
+                }
+            }
+
+            manejar_errores();
+        </script>
+    </body>
+</html>

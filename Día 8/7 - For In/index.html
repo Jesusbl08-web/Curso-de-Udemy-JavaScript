@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <title>For In</title>
+    </head>
+    <body>
+        <script>
+            function Perro(raza, edad, color) {
+                this.patas = 4;
+                this.raza = raza;
+                this.edad = edad;
+                this.color = color;
+                this.ladrar = function() {
+                    console.log("Guau");
+                }
+            }
+
+            let firulais = new Perro("Pastor belga", 5, "Marrón");
+            let toby = new Perro("Beagle", 15, "Blanco");
+
+            for (let caracteristica in toby) {
+                console.log(caracteristica + ": " + toby[caracteristica]);
+            }
+        </script>
+    </body>
+</html>

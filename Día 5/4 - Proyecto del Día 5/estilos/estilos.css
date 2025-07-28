@@ -1,0 +1,26 @@
+* {
+    background-color: bisque;
+    font-family:'Courier New', Courier, monospace
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+p {
+    padding: 20px;
+}
+
+button {
+    background-color: #ff9100;
+    font-size: 17px;
+    width: 120px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}

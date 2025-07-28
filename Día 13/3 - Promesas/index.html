@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <head>
+        <title>Promesas</title>
+    </head>
+    <body>
+        <script>
+            // Método 1
+
+            /*
+            let mi_promesa = new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    let error = false;
+                    if (error) {
+                        reject("La promesa ha fallado");
+                    } else {
+                        resolve("La promesa se ha cumplido");
+                    }
+                })
+            })
+
+            mi_promesa.then(function(resultado) {
+                console.log(resultado);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+            */
+
+            // Método 2
+
+            /*
+            let promesa_1 = new Promise(function(resolve, reject) {
+                setTimeout(resolve, 2000,"Hola");
+            });
+
+            let promesa_2 = new Promise(function(resolve, reject) {
+                setTimeout(resolve, 4000,"Mundo");
+            });
+
+            Promise.all([promesa_1, promesa_2]).then(function(valores) {
+                console.log(valores);
+            });
+            console.log("El código sigue su camino");
+            */
+
+            // Método 3
+
+            function obtener_usuarios() {
+                return new Promise(function(resolve, reject) {
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            resolve(JSON.parse(xhr.responseText));
+                        } else {
+                            reject(xhr.statusText);
+                        }
+                    }
+                    xhr.send();
+                });
+            }
+
+            obtener_usuarios()
+            .then(function(usuarios) {
+                console.log(usuarios);
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+        </script>
+    </body>
+</html>

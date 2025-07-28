@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>Subclases</title>
+    </head>
+    <body>
+        <script>
+            class Deportista {
+                constructor (nombre, apellidos) {
+                    this.nombre = nombre;
+                    this.apellidos = apellidos;
+                }
+            }
+
+            class Futbolista extends Deportista {
+                constructor (nombre, apellidos, num_goles) {
+                    super(nombre, apellidos);
+                    this.num_goles = num_goles;
+                }
+            }
+
+            let deportista_1 = new Deportista("Jesús", "Bejarano");
+
+            let futbolista_1 = new Futbolista("Aritz", "Ávila", 123);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <head>
+        <title>Modificar Prototipos</title>
+    </head>
+    <body>
+        <script>
+            function Libro (autor, titulo, cantidad_paginas) {
+                this.autor = autor;
+                this.titulo = titulo;
+                this.cantidad_paginas = cantidad_paginas;
+            }
+
+            let libro_1 = new Libro ("Carlos Ruiz Zafón", "Marina", 304);
+
+            // Haciendo .prototype podremos acceder a las instancias del objeto
+            Libro.prototype.abrir_libro = function() {
+                alert(this.titulo + " ha sido abierto");
+            }
+        </script>
+    </body>
+</html>

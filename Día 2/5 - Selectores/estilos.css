@@ -1,0 +1,23 @@
+body {
+    background-color: bisque;
+}
+
+h1:hover {
+    color: red;
+}
+
+.principal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.principal::first-line {
+    background-color: aliceblue;
+}
+
+#informacion {
+    text-align: center;
+}
+
+a[href*=".ucm"] {
+    background-color: gold;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <title>Otras Formas de Crear Objetos</title>
+    </head>
+    <body>
+        <script>
+            let coche_1 = new Object();
+
+            coche_1.marca = 'Seat';
+            coche_1['modelo'] = 'Córdoba';
+            coche_1.arrancar = function() {
+                alert("Coche arrancado");
+            };
+
+            let perro_1 = new Object({nombre: 'Firulais'});
+
+            let coche_2 = Object.create(coche_1); // Hará lo mismo que con el coche_1
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+* {
+    color: white;
+}
+
+body {
+    background-image: url('../imgs/fondo_pantalla.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+#encabezados > h2 {
+    color: #ff8c00;
+}
+
+h3 {
+    padding: 20px 0;
+}
+
+h3:hover {
+    color: #d3a4ff;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+#vida_de_mark {
+    margin: 10px;
+    padding: 20px;
+}
+
+div p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#vida_de_mark p::first-letter {
+    font-size: 2em;
+}
+
+span.sagas {
+    color: gold;
+}
+
+p a {
+    color: #d3a4ff;
+}
+
+div + p {
+    color: #ff8c00;
+    font-size: 1.3em;
+}

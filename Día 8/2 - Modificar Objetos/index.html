@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>Modificar Objetos</title>
+    </head>
+    <body>
+        <script>
+            let perro = {
+                nombre: "Firulais",
+                raza: "Pastor belga",
+                edad: 5,
+                ladrar() {
+                    console.log("Guau");
+                }
+            };
+
+            function cumplir_anios() {
+                perro.edad = perro.edad + 1;
+            }
+
+            perro["color_ojos"] = 'marrón';
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <title>Fecha y Hora</title>
+        <link rel = "stylesheet" href = "estilos/estilos.css">
+    </head>
+    <body onload = "comenzar_reloj()">
+        <p>Elige el temporizador para la alarma: </p>
+        <input type = "number" id = "tiempo_elegido">
+        <button onclick = "temporizador()">Alarma</button>
+        <h2 id = "texto_alarma">00:00:00</h2>
+
+        <audio id = "audio_alarma">
+            <source src = "audios/alarma.mp3" type = "audio/mpeg">
+            Sonido no disponible
+        </audio>
+
+        <script>
+            let tiempo_elegido = document.getElementById("tiempo_elegido");
+            let texto_alarma = document.getElementById("texto_alarma");
+            let audio_alarma = document.getElementById("audio_alarma");
+
+            function temporizador() {
+                setTimeout(tiempo_cumplido, 1000 * tiempo_elegido.value);
+            }
+
+            function tiempo_cumplido() {
+                texto_alarma.style.color = "green";
+                audio_alarma.play();
+            }
+
+            function comenzar_reloj() {
+                setInterval(tic_tac, 1000);
+            }
+
+            function tic_tac() {
+                let tiempo_actual = new Date();
+                let hora = String(tiempo_actual.getHours()).padStart(2, 0);
+                let minutos = String(tiempo_actual.getMinutes()).padStart(2, 0);
+                let segundos = String(tiempo_actual.getSeconds()).padStart(2, 0);
+
+                let texto_hora = hora + ":" + minutos + ":" + segundos;
+
+                texto_alarma.textContent = texto_hora;
+            }
+        </script>
+    </body>
+</html>

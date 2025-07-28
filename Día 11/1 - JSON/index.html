@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <div id = "nombre"></div>
+
+        <script>
+            let datos_json;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', "json/persona.json", true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    datos_json = xhr.response;
+                    let elemento_texto = document.getElementById("nombre");
+                    elemento_texto.textContent = datos_json.nombre;
+                } else {
+                    // Manejar el error
+                }
+            }
+
+            xhr.send();
+        </script>
+    </body>
+</html>

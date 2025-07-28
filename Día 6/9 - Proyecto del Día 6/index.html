@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyecto del Día 6</title>
+        <link rel = "stylesheet" href = "estilos/estilos.css">
+        <script src = "scripts/script.js"></script>
+    </head>
+    <body onload = "listado_notas()">
+        <div id = "logo">
+            <img src = "imgs/logo.jpg">
+            <h1>Bienvenido a tu boletín estudiantil</h1>
+        </div><br>
+
+        <div id = "estudiante">
+            <h2>Alumno: Jesús Bejarano Liberal</h2>
+        </div><br>
+
+        <h3>Notas:</h3>
+        <ul id = "listado_notas"></ul>
+
+        <div id = "informacion">
+            <h3>Promedio: <span id = "promedio"></span></h3>
+            <button onclick = "calcular_promedio()">Calcular promedio</button>
+
+            <h3>Nota más alta: <span id = "nota_mas_alta"></span></h3>
+            <button onclick = "nota_mas_alta()">Buscar nota más alta</button>
+
+            <h3>¿Hubo algún suspenso? <span id = "suspenso"></span></h3>
+            <button onclick = "hay_suspenso()">Consultar suspenso</button>
+        </div>
+    </body>
+</html>
+
+

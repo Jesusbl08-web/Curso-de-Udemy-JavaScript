@@ -1,0 +1,13 @@
+{
+    "nombre": "Jesús",
+    "edad": 21,
+    "es_estudiante": false,
+    "direccion": {
+        "calle": "Constitución nº 38",
+        "ciudad": "Cáceres"
+    },
+    "telefono": [
+        "555-555-555",
+        "555-666-555"
+    ]
+}

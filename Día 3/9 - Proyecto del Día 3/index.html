@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <head>
+        <title>Proyecto del Día 3</title>
+        <link rel = "stylesheet" href = "estilos/estilos.css">
+    </head>
+    <body onload = "comenzar_cuenta_atras()">
+        <h2>Responde las preguntas lo más rápido que puedas <span id = "cuenta_atras"></span></h2>
+        
+        <p>1. ¿Cuál es la capital de España?</p>
+        <input type = "text" id = "respuesta_1">
+
+        <p>2. ¿Cuánto es 2 * 10 + 15?</p>
+        <input type = "text" id = "respuesta_2">
+
+        <p>3. ¿Cuál es el símbolo químico del Hidrógeno?</p>
+        <input type = "text" id = "respuesta_3">
+
+        <p>4. ¿En qué año se descubrió América?</p>
+        <input type = "text" id = "respuesta_4">
+
+        <p>5. ¿Cómo se llama el presidente de los Estados Unidos?</p>
+        <input type = "text" id = "respuesta_5"><br><br><br>
+
+        <button onclick = "fin_del_tiempo()">Terminé</button>
+        <button onclick = "reiniciar()">Reiniciar</button>
+
+        <audio id = "audio_final">
+            <source src = "audio/gameover.mp3" type = "audio/mpeg">
+            Sonido no disponible
+        </audio>
+
+        <script>
+            let tiempo_terminado;
+            let intervalo_de_tiempo;
+
+            function comenzar_cuenta_atras() {
+                tiempo_terminado = setTimeout(tiempo_cumplido, 30000);
+                intervalo_de_tiempo = setInterval(tic_tac, 1000);
+
+                document.getElementById("cuenta_atras").textContent = 30;
+            }
+
+            function tic_tac() {
+                let tiempo = document.getElementById("cuenta_atras").textContent;
+
+                document.getElementById("cuenta_atras").textContent = tiempo - 1;
+            }
+
+            function tiempo_cumplido() {
+                clearInterval(intervalo_de_tiempo);
+
+                document.getElementById("cuenta_atras").textContent = 0;
+
+                document.getElementById("audio_final").play();
+
+                alert("GAME OVER: Se acabó el tiempo. Inténtalo de nuevo")
+            }
+
+            function fin_del_tiempo() {
+                clearTimeout(tiempo_terminado);
+                clearInterval(intervalo_de_tiempo);
+
+                let fecha = new Date();
+
+                let respuesta_1 = document.getElementById("respuesta_1").value;
+                let respuesta_2 = document.getElementById("respuesta_2").value;
+                let respuesta_3 = document.getElementById("respuesta_3").value;
+                let respuesta_4 = document.getElementById("respuesta_4").value;
+                let respuesta_5 = document.getElementById("respuesta_5").value;
+
+                let mensaje = "Hoy es " + fecha.toLocaleDateString("es-Es") + " y estas son las respuestas: " + "\n\n" + 
+                "1. " + respuesta_1 + "\n" +
+                "2. " + respuesta_2 + "\n" +
+                "3. " + respuesta_3 + "\n" +
+                "4. " + respuesta_4 + "\n" +
+                "5. " + respuesta_5 + "\n";
+
+                alert(mensaje)
+            }
+
+            function reiniciar() {
+                location.reload();
+            }
+        </script>
+    </body>
+</html>

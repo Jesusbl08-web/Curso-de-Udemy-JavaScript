@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>This</title>
+    </head>
+    <body>
+        <script>
+            let perro_1 = {
+                nombre: "Firulais",
+                raza: "Pastor belga",
+                edad: 5,
+                ladrar() {
+                    console.log("Guau");
+                },
+                saludar() {
+                    console.log("Hola, me llamo " + this.nombre);
+                }
+            };
+
+            let perro_2 = {
+                nombre: "Toby",
+                raza: "Caniche",
+                edad: 15,
+                ladrar() {
+                    console.log("Guau");
+                },
+                saludar() {
+                    console.log("Hola, me llamo " + this.nombre);
+                }
+            };
+        </script>
+    </body>
+</html>
